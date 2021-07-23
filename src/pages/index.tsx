@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { RandomSVG } from "../components/randomSvg";
 
 export default function Home() {
   return (
@@ -12,12 +12,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-        <a href="/vector.svg" download="test.svg">
-          <Image src="/vector.svg" alt="" width={493} height={419} />
-        </a>
+        <h1 className={styles.title}>Random Blob</h1>
+        <div className={styles.svgWrapper}>
+          <RandomSVG />
+        </div>
       </main>
     </div>
   );
